@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Space – Solar System Explorer | Project</title>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#070b11;--bg2:#101923;--ink:#f3f6f9;--mute:#9fb0bf;--line:rgba(255,255,255,.14);--green:#12d48a;--pink:#ff2d7a;--card:rgba(255,255,255,.04);box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#070b11}}
+:root[data-theme="dark"]{--bg:#070b11}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*,*:before,*:after{box-sizing:border-box}
+body{margin:0;background:radial-gradient(90% 60% at 80% 0%,#1b2b3d 0%,var(--bg) 60%);background-color:var(--bg);color:var(--ink);font-family:"IBM Plex Sans","Segoe UI",system-ui,sans-serif;line-height:1.6}
+.wrap{max-width:980px;margin:0 auto;padding:36px 24px 70px}
+header{display:flex;justify-content:space-between;align-items:center;font-size:14px;color:var(--mute);margin-bottom:60px;gap:12px;flex-wrap:wrap}
+header b{color:var(--ink);font-weight:600;font-size:18px}
+.wip{display:inline-flex;align-items:center;gap:8px;background:rgba(255,45,122,.14);border:1px solid rgba(255,45,122,.5);color:#ff7aa8;padding:6px 14px;border-radius:30px;font-size:12px;font-weight:600}
+.wip i{width:8px;height:8px;border-radius:50%;background:var(--pink);animation:p 1.6s infinite}
+@keyframes p{50%{opacity:.25}}
+h1{font-size:clamp(40px,7vw,72px);font-weight:400;line-height:1.05;letter-spacing:-1px;margin:22px 0 18px}
+.lead{font-size:19px;color:#d3dde6;max-width:640px;margin:0 0 30px}
+.btns{display:flex;gap:14px;flex-wrap:wrap}
+.btn{display:inline-block;padding:14px 28px;font:600 12px inherit;font-family:inherit;letter-spacing:.6px;text-transform:uppercase;text-decoration:none;border-radius:3px;border:1.5px solid var(--green);color:var(--green)}
+.btn.main{background:var(--green);color:#052018}
+.btn:hover,.btn:focus-visible{filter:brightness(1.15);outline:none}
+section{margin-top:64px}
+h2{font-size:13px;font-weight:600;color:var(--mute);letter-spacing:1.5px;text-transform:uppercase;margin:0 0 20px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:16px}
+.c{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px}
+.c h3{margin:0 0 6px;font-size:17px;font-weight:500}
+.c p{margin:0;color:var(--mute);font-size:14px}
+.story{font-size:17px;color:#d3dde6;max-width:700px}
+.tags{display:flex;flex-wrap:wrap;gap:10px}
+.tags span{border:1px solid rgba(80,130,150,.5);background:rgba(20,40,55,.5);padding:8px 16px;border-radius:30px;font-size:13px}
+.road{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+.road li{display:flex;gap:14px;align-items:flex-start;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 18px;font-size:15px}
+.st{flex:none;font-size:11px;font-weight:600;padding:4px 10px;border-radius:20px;margin-top:2px;white-space:nowrap}
+.done{background:rgba(18,212,138,.16);color:var(--green)}.doing{background:rgba(255,45,122,.16);color:#ff7aa8}.next{background:rgba(255,255,255,.08);color:var(--mute)}
+.credits{font-size:13px;color:var(--mute);max-width:700px}
+.credits a{color:var(--green)}
+footer{margin-top:64px;padding-top:24px;border-top:1px solid var(--line);color:var(--mute);font-size:13px}
+</style></head>
+<body><div class="wrap">
+<header><b>Space</b><span class="wip"><i></i>Work in progress</span></header>
+
+<h1>Solar System Explorer</h1>
+<p class="lead">An interactive 3D website where you can spin the Sun, all eight planets and a black hole, and read what makes each one special. I built it for myself, because I love exploring the solar system.</p>
+<div class="btns">
+ <a class="btn main" href="index.html" >Open live demo</a>
+ <a class="btn" href="#roadmap">See what's next</a>
+</div>
+
+<section>
+ <h2>Why I made it</h2>
+ <p class="story">I have always been curious about space, so I started this project to learn about the solar system in a way that feels like exploring, not just reading. It is not finished yet. I am still adding things and improving it whenever I have time, so some parts may change or be rough for now.</p>
+</section>
+
+<section>
+ <h2>What it does today</h2>
+ <div class="grid">
+  <div class="c"><h3>Real 3D planets</h3><p>Textured spheres built from NASA-based imagery. Drag to rotate them in any direction.</p></div>
+  <div class="c"><h3>10 objects to explore</h3><p>The Sun, 8 planets and a black hole, each with its own description.</p></div>
+  <div class="c"><h3>Quick facts</h3><p>Distance, moons, diameter, day length, year length and temperature for each one.</p></div>
+  <div class="c"><h3>Works on phones</h3><p>Responsive layout that adapts to small screens.</p></div>
+ </div>
+</section>
+
+<section>
+ <h2>Built with</h2>
+ <div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Three.js (WebGL)</span><span>NASA-based textures</span></div>
+</section>
+
+<section id="roadmap">
+ <h2>Roadmap</h2>
+ <ul class="road">
+  <li><span class="st done">Done</span>3D planets, Sun and black hole with drag to rotate</li>
+  <li><span class="st done">Done</span>Planet cards with distance, moons and key facts</li>
+  <li><span class="st doing">In progress</span>Sharper 4K textures for every planet</li>
+  <li><span class="st doing">In progress</span>Better design and a full page for each planet</li>
+  <li><span class="st next">Planned</span>Moons, planet size comparison and orbits</li>
+  <li><span class="st next">Planned</span>Quiz and more deep-space objects</li>
+ </ul>
+</section>
+
+<section>
+ <h2>Credits</h2>
+ <p class="credits">Planet textures are based on NASA imagery, shared via <a href="https://www.solarsystemscope.com/textures/" target="_blank" rel="noopener">Solar System Scope</a> (CC BY 4.0) and three.js examples. The black hole is generated with code. Distances are approximate.</p>
+</section>
+
+<footer>Made by Your Name · Still learning, still building.</footer>
+</div></body></html>
